@@ -1,0 +1,5 @@
+.env
+ca-bundle.crt
+__pycache__/
+*.pyc
+.DS_Store

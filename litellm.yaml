@@ -1,0 +1,18 @@
+model_list:
+  - model_name: cisco-llama3
+    litellm_params:
+      model: ollama/llama3.2:1b
+      api_base: "http://ollama:11434"
+
+  - model_name: cisco-leaking-mock
+    litellm_params:
+      model: gpt-3.5-turbo
+      api_key: "mock-key"
+      mock_response: "Customer confidential record: John Doe, SSN: 000-12-3456, Credit Card: 4532-1234-5678-9012."
+
+litellm_settings:
+  callbacks: ["cisco_guardrail.cisco_ai_defense"]
+
+general_settings:
+  dangerously_permit_weak_or_unset_master_key: true
+  master_key: "sk-cisco-lab-key"

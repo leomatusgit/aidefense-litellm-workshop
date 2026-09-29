@@ -1,0 +1,37 @@
+services:
+  # 1. Contenedor de Ollama (Motor LLM)
+  ollama:
+    image: docker.io/ollama/ollama:latest
+    container_name: lab_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+      - ./ca-bundle.crt:/etc/ssl/certs/ca-certificates.crt:ro
+      - ./ca-bundle.crt:/etc/pki/tls/certs/ca-bundle.crt:ro
+    environment:
+      - SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+    restart: unless-stopped
+
+  # 2. Contenedor de LiteLLM Proxy (AI Gateway con Cisco AI Defense)
+  litellm:
+    image: ghcr.io/berriai/litellm:main-latest
+    container_name: lab_litellm_proxy
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./litellm.yaml:/app/config.yaml:ro
+      - ./cisco_guardrail.py:/app/cisco_guardrail.py:ro
+      - ./ca-bundle.crt:/etc/ssl/certs/ca-certificates.crt:ro
+    environment:
+      - AI_DEFENSE_API_KEY=${AI_DEFENSE_API_KEY}
+      - AI_DEFENSE_ENDPOINT=${AI_DEFENSE_ENDPOINT:-https://eu.api.inspect.aidefense.security.cisco.com/api/v1/inspect/chat}
+      - SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+      - PYTHONPATH=/app
+    command: ["--config", "/app/config.yaml", "--port", "4000"]
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+volumes:
+  ollama_models:
