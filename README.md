@@ -1,4 +1,4 @@
-# 🛡️ Cisco AI Defense & LiteLLM Workshop
+#  Cisco AI Defense & LiteLLM Workshop
 
 > **Enterprise AI Gateway Integration, Bidirectional Custom Guardrails & Automated Testing Suite**  
 > **Author:** Leonel Matus Climaco — Security TAC  
@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Architecture & Overview
+##  Architecture & Overview
 
 This workshop demonstrates how enterprise organizations integrate **Cisco AI Defense SaaS** with **LiteLLM Proxy** to enforce bidirectional runtime security guardrails on Large Language Model (LLM) inference pipelines.
 
@@ -24,10 +24,10 @@ This workshop demonstrates how enterprise organizations integrate **Cisco AI Def
 │   ┌────────────────────────────────────────────────────────────────────────────────────┐   │
 │   │ cisco_guardrail.py (CustomGuardrail Interceptor)                                   │   │
 │   │                                                                                    │   │
-│   │  [A] Pre-Call Hook  ──────▶ 2. POST /api/v1/inspect/chat ────▶ ┌────────────────┐   │   │
+│   │  [A] Pre-Call Hook  ──────▶ 2. POST /api/v1/inspect/chat ───▶ ┌────────────────┐   │   │
 │   │     (Input Check)   ◀────── 3. Verdict: ALLOW / BLOCK   ◀──── │                │   │   │
 │   │                                                               │ Cisco AI       │   │   │
-│   │  [B] Post-Call Hook ──────▶ 5. POST /api/v1/inspect/chat ────▶ │ Defense SaaS  │   │   │
+│   │  [B] Post-Call Hook ──────▶ 5. POST /api/v1/inspect/chat ───▶ │ Defense SaaS   │   │   │
 │   │     (Output Check)  ◀────── 6. Verdict: ALLOW / BLOCK   ◀──── │ (Control Plane)│   │   │
 │   └───────────────────────────────────────────────────────────────┴────────────────┘   │   │
 │                                              ▲                                         │   │
@@ -92,7 +92,7 @@ docker compose up -d
 
 ---
 
-## 🧪 Automated Testing (Recommended)
+##  Automated Testing (Recommended)
 
 To eliminate JSON formatting and newline errors caused by copying multi-line commands from terminals or PDFs, use the built-in automated test runner:
 
@@ -109,7 +109,7 @@ chmod +x test_payloads.sh
 
 ---
 
-## 💻 Manual Verification Commands (Single-Line)
+## Manual Verification Commands (Single-Line)
 
 If running tests manually, use these single-line commands:
 
@@ -157,7 +157,7 @@ Content-Type: application/json
 
 ---
 
-## 🛠️ Troubleshooting
+##  Troubleshooting
 
 | Issue | Root Cause | Solution |
 | :--- | :--- | :--- |
@@ -169,6 +169,4 @@ Content-Type: application/json
 
 ## 📄 Documentation Deliverables
 
-* **Lab Guide (PDF):** `cisco_ai_defense_litellm_workshop_guide.pdf`
-* **Lab Guide (Word DOCX):** `cisco_ai_defense_litellm_workshop_guide.docx`
 * **Manual Commands Reference:** `TEST_COMMANDS.md`
