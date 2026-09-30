@@ -61,7 +61,7 @@ CISCO_AI_DEFENSE_API_KEY="your-actual-api-key"
 CISCO_AI_DEFENSE_APP_ID="your-app-id"
 LITELLM_MASTER_KEY="sk-cisco-lab-key"
 ```
-
+# For other endpoints please visit https://developer.cisco.com/docs/ai-defense/getting-started/#base-url
 ---
 
 ### 2. Choose Your Deployment Mode
