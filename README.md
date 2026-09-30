@@ -58,7 +58,7 @@ cp .env.example .env
 Edit `.env` with your Cisco AI Defense SaaS credentials:
 ```env
 CISCO_AI_DEFENSE_API_KEY="your-actual-api-key"
-CISCO_AI_DEFENSE_ENDPOINT="https://us.inspect.aidefense.cisco.com/api/v1/inspect/chat"
+CISCO_AI_DEFENSE_ENDPOINT="https://us.api.inspect.aidefense.cisco.com/api/v1/inspect/chat"
 
 # For other endpoints please visit https://developer.cisco.com/docs/ai-defense/getting-started/#base-url
 
