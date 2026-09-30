@@ -1,5 +1,5 @@
 services:
-  # 1. Contenedor de Ollama (Motor LLM)
+  # 1. Ollama (LLM Engine) container
   ollama:
     image: docker.io/ollama/ollama:latest
     container_name: lab_ollama
@@ -13,7 +13,7 @@ services:
       - SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
     restart: unless-stopped
 
-  # 2. Contenedor de LiteLLM Proxy (AI Gateway con Cisco AI Defense)
+  # 2. LiteLLM Proxy (AI Gateway with Cisco AI Defense) container
   litellm:
     image: ghcr.io/berriai/litellm:main-latest
     container_name: lab_litellm_proxy
