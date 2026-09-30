@@ -44,7 +44,7 @@ This workshop demonstrates how enterprise organizations integrate **Cisco AI Def
 
 ---
 
-## 🚀 Quick Start & Deployment Modes
+## Quick Start & Deployment Modes
 
 ### 1. Clone the Repository & Configure Credentials
 ```bash
@@ -66,7 +66,7 @@ LITELLM_MASTER_KEY="sk-cisco-lab-key"
 
 ### 2. Choose Your Deployment Mode
 
-#### ⚡ Mode A: Standalone Python (Fastest / <200MB RAM)
+#### Mode A: Standalone Python (Fastest / <200MB RAM)
 *Ideal for corporate laptops, quick verification, and systems without GPU/containers.*
 
 ```bash
@@ -79,7 +79,7 @@ pip install -r requirements.txt
 litellm --config litellm_config.yaml --port 4000
 ```
 
-#### 🐳 Mode B: Podman / Docker Compose (Full Stack)
+#### Mode B: Podman / Docker Compose (Full Stack)
 *Runs local Ollama (`llama3.2:1b`) container + LiteLLM container.*
 
 ```bash
@@ -130,7 +130,7 @@ curl -i -X POST http://localhost:4000/v1/chat/completions -H "Content-Type: appl
 
 ---
 
-## 🔍 Expected Security Logs in Cisco AI Defense
+##  Expected Security Logs in Cisco AI Defense
 
 When an outbound leak is blocked, LiteLLM intercepts the response and returns:
 
