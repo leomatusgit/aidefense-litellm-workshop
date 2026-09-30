@@ -6,7 +6,7 @@ from litellm.integrations.custom_guardrail import CustomGuardrail
 class CiscoAIDefense(CustomGuardrail):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        # Lee las variables inyectadas automáticamente por el contenedor/.env
+        # Variables injected to contenedor/.env
         self.api_key = os.getenv("AI_DEFENSE_API_KEY", "")
         self.endpoint = os.getenv(
             "AI_DEFENSE_ENDPOINT", 
@@ -31,7 +31,7 @@ class CiscoAIDefense(CustomGuardrail):
             print(f"[Cisco AI Defense] Error de conexión: {e}")
         return None
 
-    # [ETAPA 1] Pre-Call Hook: Inspección de entrada del usuario
+    # [Stage 1] Pre-Call Hook: User inbound inspection.
     async def async_pre_call_hook(self, user_api_key_dict, cache, data, call_type):
         messages = data.get("messages", [])
         if not messages:
@@ -52,7 +52,7 @@ class CiscoAIDefense(CustomGuardrail):
                 }
             )
 
-    # [ETAPA 2] Post-Call Hook: Inspección de salida del modelo (Prevención de fuga de datos)
+    # [Stage 2] Post-Call Hook: USer outbound inspection (DLP)
     async def async_post_call_success_hook(self, data, user_api_key_dict, response):
         if not response:
             return
@@ -85,5 +85,5 @@ class CiscoAIDefense(CustomGuardrail):
                 }
             )
 
-# Instancia exportada para LiteLLM
+# Exported instance for LiteLLM
 cisco_ai_defense = CiscoAIDefense()
