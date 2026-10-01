@@ -46,12 +46,12 @@ This workshop demonstrates how enterprise organizations integrate **Cisco AI Def
 
 ## Quick Start & Deployment Modes
 
-Step 1: Open Token Settings
-Log in to GitHub.
-Click your Profile Picture in the top-right corner → Settings.
-In the left sidebar, scroll down to the bottom and click Developer settings.
-In the left menu, go to Personal access tokens → click Tokens (classic).
-Direct link: github.com/settings/tokens
+## Step 1: Open Token Settings
+## Log in to GitHub.
+## Click your Profile Picture in the top-right corner → Settings.
+## In the left sidebar, scroll down to the bottom and click Developer settings.
+## In the left menu, go to Personal access tokens → click Tokens (classic).
+## Direct link: github.com/settings/tokens
 
 ### 1. Clone the Repository & Configure Credentials
 ```bash
