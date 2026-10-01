@@ -46,12 +46,16 @@ This workshop demonstrates how enterprise organizations integrate **Cisco AI Def
 
 ## Quick Start & Deployment Modes
 
-## Step 1: Open Token Settings
-## Log in to GitHub.
-## Click your Profile Picture in the top-right corner → Settings.
-## In the left sidebar, scroll down to the bottom and click Developer settings.
-## In the left menu, go to Personal access tokens → click Tokens (classic).
-## Direct link: github.com/settings/tokens
+### How to Generate a Personal Access Token (Classic)
+
+1. Log in to **[GitHub](https://github.com/)**.
+2. Click your **Profile Picture** in the top-right corner → **Settings**.
+3. In the left sidebar, scroll down to the bottom and click **Developer settings**.
+4. In the left menu, go to **Personal access tokens** → click **Tokens (classic)**.
+   * *Direct link:* [github.com/settings/tokens](https://github.com/settings/tokens)
+5. Click **Generate new token** → select **Generate new token (classic)**.
+6. In **Note**, enter a name (e.g. `Laptop-Clone`), choose an expiration, and check the **`repo`** scope checkbox.
+7. Click **Generate token** at the bottom and copy your token (`ghp_...`).
 
 ### 1. Clone the Repository & Configure Credentials
 ```bash
