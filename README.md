@@ -60,19 +60,24 @@ This workshop demonstrates how enterprise organizations integrate **Cisco AI Def
 ### 1. Clone the Repository & Configure Credentials
 ```bash
 git clone https://github.com/leomatusgit/aidefense-litellm-workshop.git
+```
+
+# Move to the cloned folder
+```bash
 cd aidefense-litellm-workshop
+```
 
 # Copy environment template
+```bash
 cp .env.example .env
 ```
 
-Edit `.env` with your Cisco AI Defense SaaS credentials:
+Edit `.env` with your Cisco AI Defense API Kye:
 ```env
 CISCO_AI_DEFENSE_API_KEY="your-actual-api-key"
 CISCO_AI_DEFENSE_ENDPOINT="https://us.api.inspect.aidefense.cisco.com/api/v1/inspect/chat"
 
 # For other endpoints please visit https://developer.cisco.com/docs/ai-defense/getting-started/#base-url
-
 ```
 
 ---
