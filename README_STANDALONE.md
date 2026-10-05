@@ -1,23 +1,23 @@
-# 🛡️ Cisco AI Defense - Standalone Python Lab
+# Cisco AI Defense - Standalone Python Lab
 
 > **Runtime Protection with LiteLLM & Cisco AI Defense SaaS (Zero Containers / Zero GPU)**  
 > **Author:** Leonel Matus Climaco — Technical Consulting Engineer (Security TAC)  
 
 ---
 
-## 📌 1. Overview
+##  1. Overview
 This laboratory enables rapid validation of **Cisco AI Defense Runtime Protection** directly on any corporate laptop (macOS, Linux, or Windows) without requiring Docker, Podman, or local GPUs, leveraging LiteLLM's internal synthetic inference engine (Mocks).
 
 ---
 
-## ⚙️ 2. Prerequisite: Cisco AI Defense SaaS Policy Configuration
+## ⚙️2. Prerequisite: Cisco AI Defense SaaS Policy Configuration
 Before starting, log in to the Cisco AI Defense SaaS portal and ensure the **Policy Profile** assigned to your application has the following rules configured in **Block / Protect** mode:
 * **Inbound Rules:** Prompt Injection / Harmful Content.
 * **Outbound Rules (DLP):** Sensitive Data / PII (Credit Cards, SSN).
 
 ---
 
-## 🚀 3. Environment Preparation
+## 3. Environment Preparation
 
 ### Step 1: Create and Activate Virtual Environment
 ```bash
@@ -50,7 +50,7 @@ $env:AI_DEFENSE_ENDPOINT="https://us.api.inspect.aidefense.security.cisco.com/ap
 
 ---
 
-## ⚡ 4. Start LiteLLM Proxy Gateway (Terminal 1)
+##  4. Start LiteLLM Proxy Gateway (Terminal 1)
 
 ```bash
 PYTHONPATH=. python -m litellm.proxy.proxy_cli --config litellm.yaml --port 4000
@@ -58,7 +58,7 @@ PYTHONPATH=. python -m litellm.proxy.proxy_cli --config litellm.yaml --port 4000
 
 ---
 
-## 🧪 5. Security Validation Tests (Terminal 2)
+## 🧪5. Security Validation Tests (Terminal 2)
 
 ### Test 1: Benign Technical Query (Expected: `HTTP 200 OK` — Allow)
 ```bash
@@ -86,7 +86,7 @@ curl -i -X POST http://localhost:4000/v1/chat/completions \
 
 ---
 
-## 🛠️ 6. Troubleshooting
+## 6. Troubleshooting
 
 | Symptom | Root Cause | Resolution |
 | :--- | :--- | :--- |
