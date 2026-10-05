@@ -62,12 +62,12 @@ This workshop demonstrates how enterprise organizations integrate **Cisco AI Def
 git clone https://github.com/leomatusgit/aidefense-litellm-workshop.git
 ```
 
-# Move to the cloned folder
+### Move to the cloned folder
 ```bash
 cd aidefense-litellm-workshop
 ```
 
-# Copy environment template
+### Copy environment template
 ```bash
 cp .env.example .env
 ```
