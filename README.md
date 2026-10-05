@@ -85,7 +85,7 @@ If you are running on macOS, export your system Keychain certificates before sta
 
 ```bash
 # Export Cisco / Umbrella system certificates to ca-bundle.crt:
-rm -rf ca-bundle.crt && security find-certificate -a -p /Library/Keychains/System.keychain /System/Library/Keychains/SystemRootCertificates.keychain > ca-bundle.crt
+security find-certificate -a -p /Library/Keychains/System.keychain /System/Library/Keychains/SystemRootCertificates.keychain > ca-bundle.crt
 ```
 
 ### 2. Choose Your Deployment Mode 
