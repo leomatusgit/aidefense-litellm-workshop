@@ -1,6 +1,6 @@
 # Cisco AI Defense - Standalone Python Lab
 
-> **Runtime Protection with LiteLLM & Cisco AI Defense SaaS (Zero Containers / Zero GPU)**  
+> **Runtime Protection with LiteLLM & Cisco AI Defense SaaS (Zero Containers)**  
 > **Author:** Leonel Matus Climaco — Technical Consulting Engineer (Security TAC)  
 
 ---
