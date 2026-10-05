@@ -97,7 +97,7 @@ security find-certificate -a -p /Library/Keychains/System.keychain /System/Libra
 
 ```bash
 # Using Podman:
-podman-compose up -d
+podman compose up -d
 
 # Or using Docker:
 docker compose up -d
