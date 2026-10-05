@@ -57,6 +57,10 @@ This workshop demonstrates how enterprise organizations integrate **Cisco AI Def
 6. In **Note**, enter a name (e.g. `Laptop-Clone`), choose an expiration, and check the **`repo`** scope checkbox.
 7. Click **Generate token** at the bottom and copy your token (`ghp_...`).
 
+### Prerequisites: 
+1. Create an API app on AI defense and test the connection with the Connection guide.
+2. Verify you have Docker or Podman installed. 
+
 ### 1. Clone the Repository & Configure Credentials
 ```bash
 git clone https://github.com/leomatusgit/aidefense-litellm-workshop.git
@@ -88,22 +92,7 @@ If you are running on macOS, export your system Keychain certificates before sta
 security find-certificate -a -p /Library/Keychains/System.keychain /System/Library/Keychains/SystemRootCertificates.keychain > ca-bundle.crt
 ```
 
-### 2. Choose Your Deployment Mode 
-
-#### Mode A: Standalone Python (Fastest / <200MB RAM)
-*Ideal for corporate laptops, quick verification, and systems without GPU/containers.*
-
-```bash
-# Create and activate virtual environment
-python3 -m venv venv
-source venv/bin/activate
-
-# Install dependencies and start proxy
-pip install -r requirements.txt
-litellm --config litellm_config.yaml --port 4000
-```
-
-#### Mode B: Podman / Docker Compose (Full Stack)
+### Podman / Docker Compose (Full Stack)
 *Runs local Ollama (`llama3.2:1b`) container + LiteLLM container.*
 
 ```bash
