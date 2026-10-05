@@ -79,10 +79,16 @@ CISCO_AI_DEFENSE_ENDPOINT="https://us.api.inspect.aidefense.cisco.com/api/v1/ins
 
 # For other endpoints please visit https://developer.cisco.com/docs/ai-defense/getting-started/#base-url
 ```
+### macOS Prerequisite (Cisco Corporate SSL Certificates)
 
----
+If you are running on macOS, export your system Keychain certificates before starting Docker or Python to ensure corporate SSL inspection and container volume mounts work seamlessly:
 
-### 2. Choose Your Deployment Mode
+```bash
+# Export Cisco / Umbrella system certificates to ca-bundle.crt:
+rm -rf ca-bundle.crt && security find-certificate -a -p /Library/Keychains/System.keychain /System/Library/Keychains/SystemRootCertificates.keychain > ca-bundle.crt
+```
+
+### 2. Choose Your Deployment Mode 
 
 #### Mode A: Standalone Python (Fastest / <200MB RAM)
 *Ideal for corporate laptops, quick verification, and systems without GPU/containers.*
