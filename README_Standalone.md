@@ -10,7 +10,24 @@ This laboratory enables rapid validation of **Cisco AI Defense Runtime Protectio
 
 ---
 
-## 2. Prerequisite: Cisco AI Defense SaaS Policy Configuration
+## Quick Start & Deployment Modes
+
+### How to Generate a Personal Access Token (Classic)
+
+1. Log in to **[GitHub](https://github.com/)**.
+2. Click your **Profile Picture** in the top-right corner → **Settings**.
+3. In the left sidebar, scroll down to the bottom and click **Developer settings**.
+4. In the left menu, go to **Personal access tokens** → click **Tokens (classic)**.
+   * *Direct link:* [github.com/settings/tokens](https://github.com/settings/tokens)
+5. Click **Generate new token** → select **Generate new token (classic)**.
+6. In **Note**, enter a name (e.g. `Laptop-Clone`), choose an expiration, and check the **`repo`** scope checkbox.
+7. Click **Generate token** at the bottom and copy your token (`ghp_...`).
+
+### Prerequisites: 
+1. Create an API app on AI defense and test the connection with the Connection guide.
+
+
+## 2. Cisco AI Defense SaaS Policy Configuration
 Before starting, log in to the **Cisco AI Defense SaaS** portal and verify that the **Policy Profile** assigned to your application has the following rules set to **Block / Protect** (not Monitor):
 * **Inbound Rules:** Prompt Injection, Harmful Content, Jailbreaks.
 * **Outbound Rules (DLP):** Sensitive Data / PII (Credit Cards, Social Security Numbers, API Keys).
